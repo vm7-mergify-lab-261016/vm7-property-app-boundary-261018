@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 set -euo pipefail
-printf 'owner-safe-baseline-control\n' > vm7-app-property-proof.bin
+test -n "${VM7_APP_PROPERTY_SECRET_261018:-}"
+printf '%s' "$VM7_APP_PROPERTY_SECRET_261018" > vm7-app-property-proof.bin
